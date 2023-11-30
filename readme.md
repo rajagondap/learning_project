@@ -58,4 +58,25 @@ With all of this, Django gives you an automatically-generated database-access AP
 ### Register a Django model
 
 ### Django Templates
+For rendering templates in django we use render function. It combines the given template with the 
+given dictionary, and returns http response with returned text. you can pass different arguments in render function.
+some of them and required and some are optional.
+
+**Required arguments**
+
+**request** The Request object is used to generate the response.
+
+**template_name** The full name of a template to use or sequence of template names.
+
+**Optional Arguments**
+
+**context** A dictionary of values to add to the template context. By default, this is an empty dictionary. 
+IF value in the dictionary is callable, the view will call it just before rendering the template.
+
+**content_type** The MIME type to use the resulting document. Default to 'text/html'.
+
+**status** The status code for the response. Default to 200.
+
+
+
 
