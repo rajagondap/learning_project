@@ -1,7 +1,9 @@
 from django.shortcuts import render, HttpResponse
+from .models import Article
 
 
 # Create your views here.
 
 def article_list(request):
-    return HttpResponse(" This is changed now. urls.py in article folder")
+    article_list = Article.objects.all().order_by('-published')
+    return render(request, 'articles.html', {'article_list': article_list})

@@ -77,6 +77,24 @@ IF value in the dictionary is callable, the view will call it just before render
 
 **status** The status code for the response. Default to 200.
 
+#### Template inheritance
+
+#### Adding CSS and Bootstrap Style
+
+#### Creating Dynamic Slug with signals
+
+django includes signal dispatcher which helps decoupled applications get notified when action occurs elsewhere in the framework
+and an actual signal that allows certain senders to notify a set of receivers
+that some action has taken place.
+
+They're especially useful when many piece of code may be interested in the same events.
+
+
+**Note - We will write more about Signals and slug here**
+
+
+#### Django - Retriving Data
+
 
 
 
