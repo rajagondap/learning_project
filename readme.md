@@ -56,3 +56,6 @@ With all of this, Django gives you an automatically-generated database-access AP
 
 
 ### Register a Django model
+
+### Django Templates
+
