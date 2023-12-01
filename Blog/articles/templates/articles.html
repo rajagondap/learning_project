@@ -20,7 +20,7 @@
 
     {% for article in article_list %}
         <span class="badge rounded-pill bg-success"> Author: {{article.author}}</span>
-        <h4 ><a class="link-style" href=""> {{article.title}}</a></h4>
+        <h4 ><a class="link-style" href="{% url 'article_details' article.slug %}"> {{article.title}}</a></h4>
 
     {% endfor %}
 
