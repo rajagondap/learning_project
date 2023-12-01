@@ -87,13 +87,25 @@ django includes signal dispatcher which helps decoupled applications get notifie
 and an actual signal that allows certain senders to notify a set of receivers
 that some action has taken place.
 
-They're especially useful when many piece of code may be interested in the same events.
+They're especially us{{article.title}}
+eful when many piece of code may be interested in the same events.
 
 
 **Note - We will write more about Signals and slug here**
 
 
-#### Django - Retriving Data
+#### Django - Retrieving Data
+
+#### Django - Login System
+
+#### Django Registration 
+
+Let's create our registration system in django.
+
+use crispy form library for creating good-looking forms
+
+
+
 
 
 
