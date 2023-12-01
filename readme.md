@@ -105,6 +105,12 @@ Let's create our registration system in django.
 use crispy form library for creating good-looking forms
 
 
+#### Create Built-in logout function in django
+
+#### Django Restricting Navbar
+
+
+
 
 
 
