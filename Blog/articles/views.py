@@ -1,6 +1,6 @@
-from django.shortcuts import render, HttpResponse, get_object_or_404
+from django.shortcuts import render, HttpResponse, get_object_or_404, redirect
 from .models import Article
-from .forms import LoginForm, UserRegistration
+from .forms import LoginForm, UserRegistration, ArticleRegistrationForm
 from django.contrib.auth import authenticate, login
 
 
@@ -48,3 +48,17 @@ def register(request):
         user_form = UserRegistration()
 
     return render(request, 'account/register.html', {'user_form': user_form})
+
+
+def article_form(request):
+    if request.method == "POST":
+        article_form = ArticleRegistrationForm(request.POST)
+        if article_form.is_valid():
+            article = article_form.save(commit=False)
+            article.author = request.user
+            article.save()
+
+            return redirect('article_list')
+    else:
+        article_form = ArticleRegistrationForm()
+    return render(request, 'account/add_article.html', {'article_form': article_form})
