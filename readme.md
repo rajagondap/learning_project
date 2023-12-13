@@ -110,6 +110,8 @@ use crispy form library for creating good-looking forms
 #### Django Restricting Navbar
 
 
+## update and delete
+
 
 
 
