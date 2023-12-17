@@ -3,6 +3,7 @@ from .models import Article
 from .forms import LoginForm, UserRegistration, ArticleRegistrationForm, ArticleUpdateForm
 from django.contrib.auth import authenticate, login
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.auth.decorators import login_required
 
 
 # Create your views here.
@@ -61,6 +62,7 @@ def register(request):
     return render(request, 'account/register.html', {'user_form': user_form})
 
 
+@login_required
 def article_form(request):
     if request.method == "POST":
         article_form = ArticleRegistrationForm(request.POST)
